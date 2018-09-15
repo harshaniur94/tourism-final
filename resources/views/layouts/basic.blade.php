@@ -19,6 +19,11 @@
     <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Monoton|Ultra" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Monoton|Satisfy|Ultra" rel="stylesheet">
+    <style>
+    body{
+        overflow-x: hidden;
+    }
+    </style>
 </head>
 
 <body>
@@ -26,6 +31,7 @@
         @include('include.navbar')
         @include('include.messages')
         @yield('content')
+        @include('include.footer')
     </div>
     
 

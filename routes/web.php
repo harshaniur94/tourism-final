@@ -14,9 +14,10 @@
 Route::get('/', 'PagesController@index');
 
 
-Route::resource('boats','BoatsController');
+Route::resource('/boats','BoatsController');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

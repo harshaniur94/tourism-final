@@ -12,8 +12,9 @@ class BoatsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { 
         $boats = boats::all();
+       
         return view('boats.index')->with('boats', $boats);
     }
 
@@ -61,6 +62,8 @@ class BoatsController extends Controller
         $boats->ptwo ='2';
         $boats->pthree ='3';
         $boats->reservationdate ='4';
+        $boats->start_time='9.00AM'
+        $boats->status='0';
         $boats->user_id = auth()->user()->id;
 
         $boats->save();
@@ -79,7 +82,7 @@ class BoatsController extends Controller
     public function show($id)
     {
         $boats = Boats::find($id);
-        return view('boats.show')->with('boats',$boats);
+        return view('userprof.boat')->with('home',$boats);
 
     }
 

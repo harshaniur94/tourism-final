@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.basic')
 @section('content')
 
 <h1>boats</h1>
-<div >
+<div class="container" >
 @if(count($boats) > 0)
     @foreach($boats as $boats)
     <div class="row jumbotron text-center blue-grey lighten-5 ">
@@ -20,6 +20,7 @@
     </div>
    
     @endforeach
+    
 @else
 
 
