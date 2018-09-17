@@ -1,45 +1,49 @@
 <!-- Footer -->
-<footer class="page-footer font-small teal pt-4">
+<footer class="page-footer font-small special-color-dark pt-4">
 
-    <!-- Footer Text -->
-    <div class="container-fluid text-center text-md-left">
+  <!-- Footer Elements -->
+  <div class="container">
 
-      <!-- Grid row -->
-      <div class="row">
+    <!--Grid row-->
+    <div class="row">
 
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
 
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat. Itaque, culpa?</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mb-md-0 mb-3">
-
-          <!-- Content -->
-          <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi hic.</p>
-
-        </div>
-        <!-- Grid column -->
+        <!-- Form -->
+        <form class="form-inline">
+          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </form>
+        <!-- Form -->
 
       </div>
-      <!-- Grid row -->
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4">
+
+        <form class="input-group">
+          <input type="text" class="form-control form-control-sm" placeholder="Your email" aria-label="Your email" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-sm btn-outline-white" type="button">Sign up</button>
+          </div>
+        </form>
+
+      </div>
+      <!--Grid column-->
 
     </div>
-    <!-- Footer Text -->
+    <!--Grid row-->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
+  </div>
+  <!-- Footer Elements -->
 
-  </footer>
-  <!-- Footer -->
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

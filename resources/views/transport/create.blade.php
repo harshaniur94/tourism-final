@@ -9,9 +9,9 @@
 
          </div>
          <div class="col-md-8 ">
-            <h3 class="font4">BOAT REGISTRATION</h3>
+            <h3 class="font4">TRANSPORT VEHICLE REGISTRATION</h3>
                 
-            {!! Form::open(['action'=> 'BoatsController@store','method'=>'POST','enctype'=>'multipart/form-data']) !!}
+            {!! Form::open(['action'=> 'TransportController@store','method'=>'POST','enctype'=>'multipart/form-data']) !!}
             <div class="form-group">
                 
                 {{FORM::text('name','',['class'=>'form-control','placeholder'=>'name'])}}
@@ -27,7 +27,7 @@
                 {{FORM::text('availableseats','',['class'=>'form-control','placeholder'=>'No of seats available'])}}
                 <br>
                 
-                {{FORM::text('priceperhead','',['class'=>'form-control','placeholder'=>'price per head'])}}
+                {{FORM::text('priceperday','',['class'=>'form-control','placeholder'=>'price per head'])}}
                 <br>
                 
                 {{FORM::text('registrationnumber','',['class'=>'form-control','placeholder'=>'government registration number'])}}
@@ -35,6 +35,8 @@
                 
                
                 {{FORM::textarea('body','',['class'=>'form-control','placeholder'=>'write a message to your customers'])}}
+                <br>
+                {{FORM::textarea('telephone','',['class'=>'form-control','placeholder'=>'telephone'])}}
                 <br>
 
                 <div class="form-group">

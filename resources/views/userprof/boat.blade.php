@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="row">
-    <div class=" col-md-12">
-        <img src="../img/kj.jpeg" alt="" class="header-img ">
+    <div class=" col-md-12 " style="width=100%" >
+        <img src="../storage/cover_images/{{$home->cover_image}}" alt="" class="header-img ">
     </div>
 
 </div> 
@@ -12,7 +12,7 @@
 <div class="row" style="margin-top:-250px">
 
         <div class="col-md-4 card ">
-            <img src="../img/e.jpeg" alt="" class="img-fluid">
+            <img src="../storage/profile_image/{{$home->profile_image}}" alt="" class="img-fluid">
         </div>
         <div  class="col-md-1"></div>
         <div class="col-md-7  card" style="padding-top:10">

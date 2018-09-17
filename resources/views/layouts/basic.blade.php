@@ -22,6 +22,7 @@
     <style>
     body{
         overflow-x: hidden;
+        
     }
     </style>
 </head>
@@ -31,7 +32,10 @@
         @include('include.navbar')
         @include('include.messages')
         @yield('content')
-        @include('include.footer')
+        <div style="margin-bottom:0px">
+                @include('include.footer')
+        </div>
+       
     </div>
     
 

@@ -15,10 +15,12 @@ Route::get('/', 'PagesController@index');
 
 
 Route::resource('/boats','BoatsController');
-
+Route::resource('/transport','TransportController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home/edit' ,'HomeController@edit');
+
+

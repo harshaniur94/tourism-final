@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
         <div class=" col-md-12">
-            <img src="img/kj.jpeg" alt="" class="header-img ">
+        <img src="storage/cover_images/{{$home->cover_image}}" alt="" class="header-img ">
         </div>
         
     </div>
@@ -13,18 +13,16 @@
 <div class="row"  style="margin-top:-250px">
 
         <div class="col-md-4 card " >
-            <img src="img/e.jpeg" alt="" class="img-fluid" style="">
-            <div style=" background-color:	#FA8072 ;width:50px" >
-                
+            <img src="storage/profile_image/{{$home->profile_image}}" alt="" class="img-fluid" style="">
+            <div style=" background-color:	#FA8072 ;width:100%" >
+                <a href="" class="btn btn-default">change photo</a>
             </div>
         </div>
         <div  class="col-md-1"></div>
         <div class="col-md-7  card" style="padding-top:10">
         <h1>{{$home->boatname}}</h1>
             <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus 
-                recusandae dolorem debitis quidem ipsam asperiores perspiciatis quisquam distinctio 
-                ipsa! Quia impedit velit ullam quod in minima distinctio reiciendis dolorum unde?</p>
+        <p>{{$home->body}}</p>
                
                <div class="">
                    <br>
@@ -68,16 +66,16 @@
     <div class="col-md-7 ">
         <div class="row ">
             <div class="col-md-4 " style="padding:20px"><h3>Earnings:$150</h3>
-                <button class="btn btn-outline-danger">Receive payement</button>
+                <button class="btn btn-outline-success">Receive payement</button>
             </div>
             
         <div class="col-md-4 " style="padding:20px">
                 <h3>Total Rides:22</h3>
-                <button class="btn btn-outline-danger ">VIEW REPORT</button>
+                <button class="btn btn-outline-success ">VIEW REPORT</button>
         </div>
         <div class="col-md-4 " style="padding:20px">
             <h3>Price:Rs 3500</h3>
-            <button class="btn btn-outline-danger">CHANGE PRICE</button>
+            <button class="btn btn-outline-success">CHANGE PRICE</button>
         </div> 
         </div>
           <div class="row ">
@@ -86,14 +84,14 @@
                     <h4>TOTAL EARNINGS</h4>
                     <p>$501</p>
                     <br>
-                    <button class="btn btn-outline-danger">TRANSACTION HISTORY</button>
+                    <button class="btn btn-outline-success">TRANSACTION HISTORY</button>
                 </div>
             </div> 
             <div class="col-md-4">
                 <div class="text-center">
                     <h4>NUMBER OF BOATS</h4 >
                     <p>1</p>
-                    <button class="btn btn-outline-danger">EDIT DETAILS</button>
+                    <button class="btn btn-outline-success">EDIT DETAILS</button>
                 </div>
                 </div>
             </div> 
