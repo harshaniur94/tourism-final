@@ -8,7 +8,7 @@ class Transport extends Model
 {
     //
      //table name
-     protected $table  = 'transport';
+     protected $table  = 'transports';
      //primary key
      public $primaryKey= 'transportid';
      //time stamp

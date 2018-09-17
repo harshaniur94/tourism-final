@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Transport;
 use App\boats;
 class HomeController extends Controller
 {
@@ -26,24 +27,40 @@ class HomeController extends Controller
         
       
         $usertype=auth()->user()->usertype;
-        // $details=boats::where('user_id', $name )->get();
+        
         
         if( $usertype=='boat owner'){
             $name=auth()->user()->id;
          $boats = Boats::where('user_id',$name)->first();
          if($boats==null){
             return view('boats.create');
+
          }
          else{
-            return view('home')->with('home',$boats);
+            
+            return view('homes')->with('home',$boats);
          }
             
         }
         
-        elseif( $usertype=='hotel')
-             return view('userprof.hotelprof')->with('hotelprof', $details);
-        elseif($usertype=='transport'){
-            return view('userprof.transport')->with('transport', $details); 
+        
+        if($usertype=='transport provider'){
+            
+            $name=auth()->user()->id;
+            
+             $transport = Transport::where('ownerid',$name)->first();
+            if($transport==null){
+                return view('transport.create'); 
+
+            }
+            else{
+                return view('transport');
+            }
+                
+                
+               
+           
+           
         }
           
         

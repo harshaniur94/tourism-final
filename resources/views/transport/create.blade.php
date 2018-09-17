@@ -14,14 +14,9 @@
             {!! Form::open(['action'=> 'TransportController@store','method'=>'POST','enctype'=>'multipart/form-data']) !!}
             <div class="form-group">
                 
-                {{FORM::text('name','',['class'=>'form-control','placeholder'=>'name'])}}
-                 <br>
-                 {{FORM::text('email','',['class'=>'form-control','placeholder'=>'email'])}}
-                 <br>
-                 {{FORM::text('password','',['class'=>'form-control','placeholder'=>'password'])}}
-                <br>
+      
                
-                {{FORM::text('title','',['class'=>'form-control','placeholder'=>'title of the boat'])}}
+                {{FORM::text('title','',['class'=>'form-control','placeholder'=>'title to display'])}}
                 <br>
            
                 {{FORM::text('availableseats','',['class'=>'form-control','placeholder'=>'No of seats available'])}}

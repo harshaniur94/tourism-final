@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\boats;
+use App\Transport;
 
 class TransportController extends Controller
 {
@@ -14,9 +14,9 @@ class TransportController extends Controller
      */
     public function index()
     {
-        $boats = boats::all();
+        $transport = transport::all();
        
-        return view('transport.index')->with('transport', $boats);
+        return view('transport.index')->with('transport', $transport);
     }
 
     /**
@@ -87,23 +87,23 @@ class TransportController extends Controller
         else{
             $fileNameToStore ="noimagep.jpg";
         }
-        $boats = new boats;
-        $boats->boatname =$request->input('title');
-        $boats->availableseats =$request->input('availableseats');
+        $transport = new transport;
+        $transport->title =$request->input('title');
+        $transport->availableseats =$request->input('availableseats');
      
-        $boats->registrationnumber =$request->input('registrationnumber');
-        $boats->body =$request->input('body');
-        $boats->telephone =$request->input('telephone');
-        $boats->priceperday =$request->input('priceperday');
-        $boats->cover_image =$fileNameToStore;
-        $boats->profile_image = $fileNameToStorep;
+$transport->registrationnumber =$request->input('registrationnumber');
+$transport->body =$request->input('body');
+$transport->telephone =$request->input('telephone');
+$transport->priceperday =$request->input('priceperday');
+$transport->cover_image =$fileNameToStore;
+$transport->profile_image = $fileNameToStorep;
       
        
         
        
-        $boats->owner_id = auth()->user()->id;
+$transport->ownerid = auth()->user()->id;
 
-        $boats->save();
+$transport->save();
 
         return redirect('/transport')->with('success','post created');
 

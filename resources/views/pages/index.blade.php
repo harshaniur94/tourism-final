@@ -214,7 +214,9 @@
 
 <div id="boxfour" class="view">
     <div class="mask flex-center rgba-black-strong">
-        <p class="white-text">strong overlay</p>
+       {{--  --}}
+       
+       {{--  --}}
     </div>
 </div>
     
