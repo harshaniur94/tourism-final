@@ -62,7 +62,7 @@ class BoatsController extends Controller
         $boats->ptwo ='2';
         $boats->pthree ='3';
         $boats->reservationdate ='4';
-        $boats->start_time='9.00AM'
+        $boats->start_time='9.00AM';
         $boats->status='0';
         $boats->user_id = auth()->user()->id;
 
@@ -94,7 +94,11 @@ class BoatsController extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $name=auth()->user()->id;
+      $boats = Boats::where('user_id',$name)->first();
+       
+        return view('boats.edit')->with('boats', $boats);
     }
 
     /**
@@ -106,7 +110,25 @@ class BoatsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $boats = boats::find($id);
+        $boats->boatname =$request->input('title');
+        $boats->availableseats =$request->input('availableseats');
+        $boats->priceperhead =$request->input('priceperhead');
+        $boats->registrationnumber =$request->input('registrationnumber');
+        $boats->body =$request->input('body');
+        $boats->receivedseats ='0';
+        $boats->pone ='1';
+        $boats->ptwo ='2';
+       
+        $boats->reservationdate ='4';
+        $boats->start_time='9.00AM';
+        $boats->status='0';
+        $boats->user_id = auth()->user()->id;
+
+        $boats->save();
+
+        return redirect('/home')->with('success','post updated');
     }
 
     /**

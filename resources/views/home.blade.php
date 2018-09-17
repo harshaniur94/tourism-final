@@ -5,7 +5,7 @@
         <div class=" col-md-12">
             <img src="img/kj.jpeg" alt="" class="header-img ">
         </div>
-
+        
     </div>
     
 <div class=" container headerprof">
@@ -36,7 +36,7 @@
                              <button type="button" class="btn btn-success">DEACTIVATE</button>
                         </div>
                         <div class="col-md-2" style="margin-top:10px">
-                             <button type="button" class="btn btn-success">ADD BOAT</button>
+                             <a href="boats/create"><button type="button" class="btn btn-success">ADD BOAT</button></a>
                         </div>
                         <div class="col-md-4" style="margin-top:10px">
                          <a href="#ex1" rel="modal:open"><button class="btn btn-success">START NEW RESERVATION</button></a></p>
@@ -46,22 +46,23 @@
 
                         </div>
                         
-                        
-                    </div>
+             </div>
         </div>
         
 </div>   
 <div class="row mb-5 mt-5 " >
     <div class="col-md-4 card" style="padding-top:50px">
       <?php  $name=auth()->user()->name; ?>
-    <p >Ownership:<span style="color:black"> <?php echo  "$name"    ?></span></p>
-    <p>boat id:<span style="color:black">{{$home->boatid}}</span></p>
-    <p>registration no:<span style="color:black">{{$home->registrationnumber}}</span></p>
+        <p >Ownership:<span style="color:black"> <?php echo  "$name"    ?></span></p>
+        <p>boat id:<span style="color:black">{{$home->boatid}}</span></p>
+        <p>registration no:<span style="color:black">{{$home->registrationnumber}}</span></p>
         <p>Available seats:<span style="color:black">{{$home->availableseats}}</span></p>
         <p>Reserved seats:<span style="color:black">{{$home->receivedseats}}</span></p>
         <p>next trip date:<span style="color:black">{{$home->reservationdate}}</span></p>
-    <p>Location:mirissa harbour</p>
+        <p>Location:mirissa harbour</p>
         <p>starts at:</p>
+        <a href="/boats/{{$home->boatid}}/edit" class="btn btn-success">EDIT</a>
+        @include('include.messages')
     </div>
     <div class="col-md-1"></div>
     <div class="col-md-7 ">

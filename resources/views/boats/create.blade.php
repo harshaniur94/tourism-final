@@ -32,7 +32,19 @@
                 
                 {{FORM::text('registrationnumber','',['class'=>'form-control','placeholder'=>'government registration number'])}}
                 <br>
-            
+                
+                <label>Usertype</label>
+			    <select   class="form-control" name="utype" style="width:200px; height:30px">
+			
+				<option value="company"  class="input">boat owner</option>
+                <option value="transport provider"  class="input" >transport provider</option>
+                <option value="hotel owner"  class="input" >hotel owner</option>
+                <option value="photographer"  class="input" >photographer</option>
+				
+			
+				
+            </select>
+            <br><br>
                 {{FORM::textarea('body','',['class'=>'form-control','placeholder'=>'write a message to your customers'])}}
                 <br>
                 <div class="container">

@@ -43,8 +43,19 @@
                             <label for="usertype" class="col-md-4 col-form-label text-md-right">{{ __('usertype') }}</label>
 
                             <div class="col-md-6">
-                                <input id="usertype" type="usertype" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }}" name="usertype" value="{{ old('usertype') }}" required>
-
+                                
+                                <select   class="form-control" name="usertype" style="width:200px; height:30px">
+                                
+                                <option value="boat owner"  class="input">boat owner</option>
+                                <option value="transport provider"  class="input" >transport provider</option>
+                                <option value="hotel owner"  class="input" >hotel owner</option>
+                                <option value="photographer"  class="input" >photographer</option>
+                                
+                                
+                                
+                                </select>
+                                
+                            
                                 @if ($errors->has('usertype'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('usertype') }}</strong>
@@ -67,6 +78,8 @@
                                 @endif
                             </div>
                         </div>
+
+                       
 
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
