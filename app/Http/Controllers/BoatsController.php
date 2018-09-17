@@ -45,12 +45,55 @@ class BoatsController extends Controller
             'name'=>'required',
             'email'=>'required',
             'password'=>'required',
+             'cover_image'=>'image|nullable|max:1999'
 
 
             
             
           
         ]);
+
+        if($request->hasfile('cover_image')){
+            //get file name with the extension
+            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+            //get just file name
+            $filename =pathinfo( $fileNameWithExt,PATHINFO_FILENAME);
+
+            //get only thhe extension
+
+            $ext=$request->file('cover_image')->getClientOriginalExtension();
+
+            //$filename to store
+            $fileNameToStore=$filename.'_'.time().'.'.$ext;
+            //upload image
+            $path = $request->file('cover_image')->storeAS('public/cover_images', $fileNameToStore);
+// harshajithhimath@gmail.com
+        }
+        else{
+            $fileNameToStore ="noimage.jpg";
+        }
+
+        if($request->hasfile('profile_image')){
+            //get file name with the extension
+            $fileNameWithExtp = $request->file('profile_image')->getClientOriginalName();
+
+            //get just file name
+            $filenamep =pathinfo( $fileNameWithExtp,PATHINFO_FILENAME);
+
+            //get only thhe extension
+
+            $extp=$request->file('profile_image')->getClientOriginalExtension();
+
+            //$filename to store
+            $fileNameToStorep=$filename.'_'.time().'.'.$ext;
+            //upload image
+            $pathp = $request->file('profile_image')->storeAS('public/profile_image', $fileNameToStore);
+
+        }
+        else{
+            $fileNameToStore ="noimagep.jpg";
+        }
         $boats = new boats;
         $boats->boatname =$request->input('title');
         $boats->availableseats =$request->input('availableseats');
@@ -58,9 +101,9 @@ class BoatsController extends Controller
         $boats->registrationnumber =$request->input('registrationnumber');
         $boats->body =$request->input('body');
         $boats->receivedseats ='0';
-        $boats->pone ='1';
-        $boats->ptwo ='2';
-        $boats->pthree ='3';
+        $boats->cover_image =$fileNameToStore;
+        $boats->profile_image = $fileNameToStorep;
+      
         $boats->reservationdate ='4';
         $boats->start_time='9.00AM';
         $boats->status='0';
@@ -118,8 +161,7 @@ class BoatsController extends Controller
         $boats->registrationnumber =$request->input('registrationnumber');
         $boats->body =$request->input('body');
         $boats->receivedseats ='0';
-        $boats->pone ='1';
-        $boats->ptwo ='2';
+      
        
         $boats->reservationdate ='4';
         $boats->start_time='9.00AM';

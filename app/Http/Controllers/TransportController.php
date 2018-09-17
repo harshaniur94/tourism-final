@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\boats;
 
 class TransportController extends Controller
 {
@@ -13,7 +14,9 @@ class TransportController extends Controller
      */
     public function index()
     {
-        //
+        $boats = boats::all();
+       
+        return view('transport.index')->with('transport', $boats);
     }
 
     /**
@@ -23,7 +26,7 @@ class TransportController extends Controller
      */
     public function create()
     {
-        //
+        return view('transport.create');
     }
 
     /**
@@ -34,7 +37,78 @@ class TransportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+         
+
+
+            
+            
+          
+        ]);
+
+        if($request->hasfile('cover_image')){
+            //get file name with the extension
+            $fileNameWithExt = $request->file('cover_image')->getClientOriginalName();
+
+            //get just file name
+            $filename =pathinfo( $fileNameWithExt,PATHINFO_FILENAME);
+
+            //get only thhe extension
+
+            $ext=$request->file('cover_image')->getClientOriginalExtension();
+
+            //$filename to store
+            $fileNameToStore=$filename.'_'.time().'.'.$ext;
+            //upload image
+            $path = $request->file('cover_image')->storeAS('public/cover_images', $fileNameToStore);
+// harshajithhimath@gmail.com
+        }
+        else{
+            $fileNameToStore ="noimage.jpg";
+        }
+
+        if($request->hasfile('profile_image')){
+            //get file name with the extension
+            $fileNameWithExtp = $request->file('profile_image')->getClientOriginalName();
+
+            //get just file name
+            $filenamep =pathinfo( $fileNameWithExtp,PATHINFO_FILENAME);
+
+            //get only thhe extension
+
+            $extp=$request->file('profile_image')->getClientOriginalExtension();
+
+            //$filename to store
+            $fileNameToStorep=$filename.'_'.time().'.'.$ext;
+            //upload image
+            $pathp = $request->file('profile_image')->storeAS('public/profile_image', $fileNameToStore);
+
+        }
+        else{
+            $fileNameToStore ="noimagep.jpg";
+        }
+        $boats = new boats;
+        $boats->boatname =$request->input('title');
+        $boats->availableseats =$request->input('availableseats');
+     
+        $boats->registrationnumber =$request->input('registrationnumber');
+        $boats->body =$request->input('body');
+        $boats->telephone =$request->input('telephone');
+        $boats->priceperday =$request->input('priceperday');
+        $boats->cover_image =$fileNameToStore;
+        $boats->profile_image = $fileNameToStorep;
+      
+       
+        
+       
+        $boats->owner_id = auth()->user()->id;
+
+        $boats->save();
+
+        return redirect('/transport')->with('success','post created');
+
+
+    
     }
 
     /**
