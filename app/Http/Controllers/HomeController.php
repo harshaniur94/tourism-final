@@ -38,7 +38,7 @@ class HomeController extends Controller
          }
          else{
             
-            return view('homes')->with('home',$boats);
+            return view('home')->with('home',$boats);
          }
             
         }
@@ -54,7 +54,8 @@ class HomeController extends Controller
 
             }
             else{
-                return view('transport');
+              
+                return view('transport')->with('transport',$transport);
             }
                 
                 
