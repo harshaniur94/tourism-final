@@ -24,3 +24,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/edit' ,'HomeController@edit');
 
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+
+
+
+Route::get('/whales',function(){
+    return view('whales');
+});
+
+
+
+Route::post('hotels',['uses'=>'HotelController@RegisterHotel',
+'as' =>'signup']);

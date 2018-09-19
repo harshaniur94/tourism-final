@@ -12,9 +12,9 @@
    
 <div class="row"  style="margin-top:-250px">
 
-        <div class="col-md-4 card " >
+        <div class="col-md-4  " >
             <img src="storage/profile_image/{{$home->profile_image}}" alt="" class="img-fluid" style="">
-            <div style=" background-color:	#FA8072 ;width:100%" >
+            <div style=" background-color:	 ;width:100%" >
                 <a href="" class="btn btn-default">change photo</a>
             </div>
         </div>
@@ -31,16 +31,16 @@
                 </div>
                 <div class="row" style=" background-color:	#FA8072 " >
                         <div class="col-md-3" style="margin-top:10px">
-                             <button type="button" class="btn btn-success">DEACTIVATE</button>
+                             <button type="button" class="btn btn-primary">DEACTIVATE</button>
                         </div>
                         <div class="col-md-2" style="margin-top:10px">
-                             <a href="boats/create"><button type="button" class="btn btn-success">ADD BOAT</button></a>
+                             <a href="boats/create"><button type="button" class="btn btn-primary">ADD BOAT</button></a>
                         </div>
                         <div class="col-md-4" style="margin-top:10px">
-                         <a href="#ex1" rel="modal:open"><button class="btn btn-success">START NEW RESERVATION</button></a></p>
+                         <a href="#ex1" rel="modal:open"><button class="btn btn-primary">START NEW RESERVATION</button></a></p>
                         </div>
                         <div class="col-md-3" style="margin-top:10px">
-                            <button class="btn btn-success">DELETE BOAT</button>
+                            <button class="btn btn-primary">DELETE BOAT</button>
 
                         </div>
                         
@@ -49,7 +49,7 @@
         
 </div>   
 <div class="row mb-5 mt-5 " >
-    <div class="col-md-4 card" style="padding-top:50px">
+    <div class="col-md-4 card jumbotron" style="padding-top:50px">
       <?php  $name=auth()->user()->name; ?>
         <p >Ownership:<span style="color:black"> <?php echo  "$name"    ?></span></p>
         <p>boat id:<span style="color:black">{{$home->boatid}}</span></p>
@@ -59,23 +59,23 @@
         <p>next trip date:<span style="color:black">{{$home->reservationdate}}</span></p>
         <p>Location:mirissa harbour</p>
         <p>starts at:</p>
-        <a href="/boats/{{$home->boatid}}/edit" class="btn btn-success">EDIT</a>
+        <a href="/boats/{{$home->boatid}}/edit" class="btn btn-primary">EDIT</a>
         @include('include.messages')
     </div>
     <div class="col-md-1"></div>
-    <div class="col-md-7 ">
+    <div class="col-md-7 jumbotron">
         <div class="row ">
             <div class="col-md-4 " style="padding:20px"><h3>Earnings:$150</h3>
-                <button class="btn btn-outline-success">Receive payement</button>
+                <button class="btn btn-primary">Receive payement</button>
             </div>
             
         <div class="col-md-4 " style="padding:20px">
                 <h3>Total Rides:22</h3>
-                <button class="btn btn-outline-success ">VIEW REPORT</button>
+                <button class="btn btn-primary ">VIEW REPORT</button>
         </div>
         <div class="col-md-4 " style="padding:20px">
             <h3>Price:Rs 3500</h3>
-            <button class="btn btn-outline-success">CHANGE PRICE</button>
+            <button class="btn btn-primary">CHANGE PRICE</button>
         </div> 
         </div>
           <div class="row ">
@@ -84,14 +84,14 @@
                     <h4>TOTAL EARNINGS</h4>
                     <p>$501</p>
                     <br>
-                    <button class="btn btn-outline-success">TRANSACTION HISTORY</button>
+                    <button class="btn btn-primary">TRANSACTION HISTORY</button>
                 </div>
             </div> 
             <div class="col-md-4">
                 <div class="text-center">
                     <h4>NUMBER OF BOATS</h4 >
                     <p>1</p>
-                    <button class="btn btn-outline-success">EDIT DETAILS</button>
+                    <button class="btn btn-primary">EDIT DETAILS</button>
                 </div>
                 </div>
             </div> 
@@ -102,7 +102,7 @@
 </div>
 {{-- modal for reservation --}}
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3 ">
 
     </div>
 

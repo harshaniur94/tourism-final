@@ -30,7 +30,10 @@
 <body>
     <div class="container-fluid">
         @include('include.navbar')
-        @include('include.messages')
+        <div style="margin-top:200px">
+            @include('include.messages')
+        </div>
+        
         @yield('content')
         <div style="margin-bottom:0px">
                 @include('include.footer')

@@ -9,7 +9,7 @@
                  <h1 class="font3 custom-header text-primary">WAVES</h1>
                  <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat culpa, similique earum odit eius molestiae odio, consequuntur
                       maxime dolores possimus quo. Amet eligendi explicabo eaque placeat perferendis sit. Porro, ipsum!</p>
-                    <button class="btn btn-outline-info">RESERVE YOUR RIDE</button>
+                    <a href="/boats"><button class="btn btn-outline-info">RESERVE YOUR RIDE</button></a>
                     </div> 
         </div>
     </div>
@@ -126,7 +126,7 @@
                                     ducimus sint voluptate quos consequuntur minima!
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus reiciendis blanditiis unde, pariatur dolorem fuga odit sed hic architecto voluptas iste tempora. Explicabo sapiente consequuntur beatae praesentium at qui blanditiis?
                                 </p>
-                                    <button class="btn btn-primary">REGISTER</button>
+                                <a href="/home" class="btn btn-primary">REGISTER</a>
                                       
                             </div>
                         </div>    
@@ -149,7 +149,7 @@
                                     ducimus sint voluptate quos consequuntur minima!
                                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus sed repellendus velit eos modi error repellat. Adipisci beatae vero labore fuga libero dolores. Aperiam quos velit officia eum esse! Architecto?
                                 </p>
-                                  <button class="btn btn-primary">REGISTER</button>
+                                <a href="/home" class="btn btn-primary">REGISTER</a>
                                    
                             </div>
                         </div>    
@@ -175,7 +175,7 @@
                                         ducimus sint voluptate quos consequuntur minima!
                                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus reiciendis blanditiis unde, pariatur dolorem fuga odit sed hic architecto voluptas iste tempora. Explicabo sapiente consequuntur beatae praesentium at qui blanditiis?
                                     </p>
-                                        <button class="btn btn-primary">REGISTER</button>
+                                    <a href="/home" class="btn btn-primary">REGISTER</a>
                                           
                                 </div>
                             </div>    
@@ -215,7 +215,37 @@
 <div id="boxfour" class="view">
     <div class="mask flex-center rgba-black-strong">
        {{--  --}}
-       
+       <div class="container">
+           <div class="row">
+               <div class="col-md-6" style="padding-top:80px">
+                    <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum ea quod iste cupiditate itaque quidem, minima harum reiciendis. Eveniet at dignissimos, cumque ratione reprehenderit harum fugit debitis. Dolores, aut laborum.</p>
+                    <a href="/whales" class="btn btn-outline-warning">SEE MORE DETAILS</a>
+                </div>
+               <div class="col-md-6">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="padding-top:50px" >
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block w-100" src="img/bb.jpeg" alt="First slide" style="height:300px">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="img/q.jpg" alt="Second slide" style="height:300px">
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="img/whale.jpg" alt="Third slide" style="height:300px">
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+               </div>
+           </div>
+       </div>
        {{--  --}}
     </div>
 </div>
@@ -259,6 +289,9 @@
        #map {
          height: 400px;  /* The height is 400 pixels */
          width: 100%;  /* The width is the width of the web page */
+        }
+        .customimg{
+           
         }
         
 </style>
