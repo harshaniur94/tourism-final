@@ -1,4 +1,4 @@
-
+{{-- navigation bar template --}}
 <div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="/"><h6 class="font3 custom-header text-primary"  style="font-size:40px">WAVES</h6></a>
@@ -19,8 +19,8 @@
                 Dropdown
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="boats/create">Boat registration</a>
-                <a class="dropdown-item" href="">view available boats</a>
+                <a class="dropdown-item" href="transport">Arrange Transport</a>
+                <a class="dropdown-item" href="hotel/show">Book hotels</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
                 </div>

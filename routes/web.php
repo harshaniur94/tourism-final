@@ -12,30 +12,25 @@
 */
 
 Route::get('/', 'PagesController@index');
-
-
 Route::resource('/boats','BoatsController');
-Route::resource('/transport','TransportController');
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/home/edit' ,'HomeController@edit');
-
-
 Route::get('/welcome', function () {
     return view('welcome');
 });
-
-
-
-
 Route::get('/whales',function(){
     return view('whales');
+});
+Route::get('/dashboardboat',function(){
+    return view('users.boatowner');
+});
+Route::get('/dashboardadmin', function(){
+   return view('users.adminprofile');
 });
 
 
 
-Route::post('hotels',['uses'=>'HotelController@RegisterHotel',
-'as' =>'signup']);
+
+
+

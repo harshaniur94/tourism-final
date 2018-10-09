@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Transport;
 use App\boats;
@@ -16,7 +14,6 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
     /**
      * Show the application dashboard.
      *
@@ -31,43 +28,22 @@ class HomeController extends Controller
         
         if( $usertype=='boat owner'){
             $name=auth()->user()->id;
-         $boats = Boats::where('user_id',$name)->first();
-         if($boats==null){
-            return view('boats.create');
-
-         }
-         else{
+            $boats = Boats::where('user_id',$name)->first();
+                if($boats==null){
+                    return view('boats.create');
+                }
+                 else{
+                    return view('home')->with('home',$boats);
+                }
             
-            return view('home')->with('home',$boats);
-         }
-            
-        }
+            }else{
+                return 'hello world';
+            }
         
         
-        if($usertype=='transport provider'){
-            
-            $name=auth()->user()->id;
-            
-             $transport = Transport::where('ownerid',$name)->first();
-            if($transport==null){
-                return view('transport.create'); 
-
-            }
-            else{
-              
-                return view('transport')->with('transport',$transport);
-            }
-                
-                
-               
-           
-           
-        }
-          
+     
         
     }
-
-
      /**
      * Show the form for editing the specified resource.
      *
@@ -80,5 +56,4 @@ class HomeController extends Controller
        
         return view('boats.edit')->with('boats', $boats);
     }
-
 }

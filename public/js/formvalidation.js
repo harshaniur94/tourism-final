@@ -25,11 +25,12 @@ var error_telephone=false;
 
 /*fname validation*/
 $("#name").keypress( function() {
+	alert('khsdgfdskf');
 	check_fname();
 	
 }
 );
-$("#fname").focusout( function() {
+$("#name").focusout( function() {
 	check_fname();
 
 
@@ -103,7 +104,7 @@ $("#tel").keypress( function() {
 
 /*first name validation funct*/
 function check_fname(){
- var fname= $("#fname").val();
+ var fname= $("fname").val();
  var pattern_fname=/^[a-zA-Z_]+( [a-zA-Z_]+)*$/;
  var error_code='0';
 if( pattern_fname.test(fname)){
@@ -142,16 +143,16 @@ if(fname!=""){
 	
 switch (error_code) { 
 	case '0': 
-	$("#fname").css("background-color","#B8FAC6  ");
+	$("#name").css("background-color","#B8FAC6  ");
 	break;
 	case '1': 
-	$("#fname").css("background-color","#FCA2A2    ");
+	$("#nname").css("background-color","#FCA2A2    ");
 	$("#First_Name_error_message").html("charachters only");
 	$("#First_Name_error_message").show();
 	error_firstname=true;
 	break;
 	case '2': 
-	$("#fname").css("background-color","#FCA2A2   ");
+	$("#nname").css("background-color","#FCA2A2   ");
 	$("#First_Name_error_message").html("please enter the first name");
 	$("#First_Name_error_message").show();
 	error_firstname=true;

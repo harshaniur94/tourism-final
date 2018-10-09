@@ -13,15 +13,32 @@
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
+                       
+
+                        {{-- first name --}}
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('First Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="fname" type="text" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname') }}" required autofocus>
                                     <span id="First_Name_error_message"></span>
-                                @if ($errors->has('name'))
+                                @if ($errors->has('fname'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('fname') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        {{-- last name --}}
+                        <div class="form-group row">
+                            <label for="fname" class="col-md-4 col-form-label text-md-right">{{ __('Last Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname') }}" required autofocus>
+                                    <span id="First_Name_error_message"></span>
+                                @if ($errors->has('lname'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('lname') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -49,9 +66,7 @@
                                 <select   class="form-control" name="usertype" style="width:200px; height:30px">
                                 
                                 <option value="boat owner"  class="input">boat owner</option>
-                                <option value="transport provider"  class="input" >transport provider</option>
-                                <option value="hotel owner"  class="input" >hotel owner</option>
-                                <option value="photographer"  class="input" >photographer</option>
+                                <option value="admin"  class="input" >admin</option>
                                 
                                 
                                 
@@ -65,6 +80,8 @@
                                 @endif
                             </div>
                         </div>
+
+                      
 
                         {{--  --}}
                         <div class="form-group row">
@@ -106,5 +123,5 @@
     </div>
 </div>
 {{-- form validation js --}}
-<script src="js/formvalidation.js"></script>
+
 @endsection

@@ -7,14 +7,25 @@
         <div  class="mask flex-center rgba-black-strong">
              <div class=" container text-center text-white">
                  <h1 class="font3 custom-header text-primary">WAVES</h1>
-                 <p class="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat culpa, similique earum odit eius molestiae odio, consequuntur
-                      maxime dolores possimus quo. Amet eligendi explicabo eaque placeat perferendis sit. Porro, ipsum!</p>
+                 <p class="">Join with us to reserve your whale watching boat rides .surf through whale watching boats and find the most suited,compare with facilitiies and different price ranges
+                 </p>
                     <a href="/boats"><button class="btn btn-outline-info">RESERVE YOUR RIDE</button></a>
-                    </div> 
+            </div> 
         </div>
     </div>
 </div>
-   
+  
+<div class="row">
+    <div class="container">
+            <div class="col-md-6">
+                <img src="" alt="">
+            </div>
+            <div class="col-md-6">
+
+            </div>
+    </div>
+    
+</div>
 
 
 <div id="boxone">
@@ -25,10 +36,10 @@
                         <div class="custom_padding">
                             <div class=" text-center" >
                                 <img src="img/sv.png" alt="" style="height:200px;width:100% " class="">
-                                <h1 class="">heading one</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
-                                    corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
-                                    ducimus sint voluptate quos consequuntur minima!</p>
+                                <h1 class="">Book your hotel Room</h1>
+                                <p>Save time and money on your accommodation search with millions of ... You are now online ...
+                                     Find your ideal hotel and compare prices from different websites ... 
+                                    From budget hostels to luxury suites, trivago makes it easy to book online.</p>
                                 
                             </div>
                         </div>    
@@ -38,10 +49,11 @@
                         <div class="custom_padding">
                             <div class=" text-center" >
                                 <img src="img/ffs.jpg" alt="" style="height:200px;width:100% " class="">
-                                <h1 class="">heading one</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
-                                    corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
-                                    ducimus sint voluptate quos consequuntur minima!</p>
+                                <h1 class="">Reserve your ride</h1>
+                                <br><br>
+                                <p>Each season brings a whole different array of scenery and species 
+                                    to the marsh – it’s not just a boat ride. Call and reserve your
+                                     spot on the boat now and get ready to experience the largest mamals marsh in SRI LANKA.</p>
                                
                             </div>
                         </div>    
@@ -52,10 +64,9 @@
                 <div class="custom_padding">
                     <div class="text-center" >
                         <img src="img/dv.jpg" alt="" style="height:200px;width:100% " class="">
-                        <h1 class="">heading one</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
-                            corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
-                            ducimus sint voluptate quos consequuntur minima!</p>
+                        <h1 class="">Arrange your transport</h1>
+                        <p>Reserve your transport to Hotel. Let our concierge team arrange your transportation and reach our hotel with convenience.
+                 </p>
                         
                     </div>
                 </div>    
@@ -120,7 +131,7 @@
                                             </div>
                                           </div>
                                 
-                                <h1 class="">heading one</h1>
+                                <h1 class="">REGISTER YOUR WHALE WATCHING BOAT</h1>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
                                     corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
                                     ducimus sint voluptate quos consequuntur minima!
@@ -143,7 +154,7 @@
                                             </div>
                                           </div>
                                 
-                                <h1 class="">heading one</h1>
+                                <h1 class="">REGISTER YOUR VEHICAL WITH WAVES</h1>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
                                     corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
                                     ducimus sint voluptate quos consequuntur minima!
@@ -169,7 +180,7 @@
                                               
                                             </div>
                                           </div>
-                                    <h1 class="">heading one</h1>
+                                    <h1 class="">REGISTER YOUR HOTELS  RESTAURENTS</h1>
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
                                         corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
                                         ducimus sint voluptate quos consequuntur minima!
@@ -192,7 +203,7 @@
                                               
                                             </div>
                                           </div>
-                                    <h1 class="">heading one</h1>
+                                    <h1 class="">JOIN WITH US AS A PHOTOGRAPHER</h1>
                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
                                         corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
                                         ducimus sint voluptate quos consequuntur minima!
@@ -218,7 +229,14 @@
        <div class="container">
            <div class="row">
                <div class="col-md-6" style="padding-top:80px">
-                    <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum ea quod iste cupiditate itaque quidem, minima harum reiciendis. Eveniet at dignissimos, cumque ratione reprehenderit harum fugit debitis. Dolores, aut laborum.</p>
+                    <p class="text-white">
+                            One of the best places in the world to see one of the only recorded resident blue whale 
+                            colonies in their natural habitat. Dolphins are regularly spotted on whale watching trips
+                             organized from Mirissa and Dondra head on the south coast. The BBC documentary titled “Ocean
+                              Giants” featuring the mesmeric world of Whales and Dolphins, and the scientist’s effort to shed 
+                              light on their habits and why they grow so large were filmed around Sri 
+                            Lanka and according to them 30 Blue Whales were sighted in a single day!
+                    </p>
                     <a href="/whales" class="btn btn-outline-warning">SEE MORE DETAILS</a>
                 </div>
                <div class="col-md-6">
@@ -249,7 +267,60 @@
        {{--  --}}
     </div>
 </div>
-    
+ <br>
+<div class="">
+    <div class="row">
+            <div class="view overlay zoom col-md-4">
+                    <img src="img/photo-1519566335946-e6f65f0f4fdf.jpg" class="img-fluid " alt="zoom">
+                    <div class="mask flex-center waves-effect waves-light">
+                      <p class="white-text">Zoom effect</p>
+                    </div>
+            </div>
+            
+            <div class="view overlay zoom col-md-4">
+                        <img src="img/lk.jpg" class="img-fluid " alt="zoom">
+                        <div class="mask flex-center waves-effect waves-light">
+                          <p class="white-text">Zoom effect</p>
+                        </div>
+            </div>
+
+            <div class="view overlay zoom col-md-4">
+                    <img src="img/www.jpeg" class="img-fluid " alt="zoom">
+                    <div class="mask flex-center waves-effect waves-light">
+                      <p class="white-text">Zoom effect</p>
+                    </div>
+            </div>
+    </div>
+    <br>
+
+    <div class="row">
+            <div class="view overlay zoom col-md-4">
+                    <img src="img/maui-whale-watch-cruise.jpg" class="img-fluid " alt="zoom">
+                    <div class="mask flex-center waves-effect waves-light">
+                      <p class="white-text">Zoom effect</p>
+                    </div>
+            </div>
+            
+            <div class="view overlay zoom col-md-4">
+                        <img src="img/t.jpeg" class="img-fluid " alt="zoom">
+                        <div class="mask flex-center waves-effect waves-light">
+                          <p class="white-text">Zoom effect</p>
+                        </div>
+            </div>
+
+            <div class="view overlay zoom col-md-4">
+                    <img src="img/bb.jpeg" class="img-fluid " alt="zoom">
+                    <div class="mask flex-center waves-effect waves-light">
+                      <p class="white-text">Zoom effect</p>
+                    </div>
+            </div>
+    </div>
+    <br>
+    <div class="row">
+
+    </div>
+
+</div>
     
     
 
@@ -282,7 +353,7 @@
     
 
 
-
+@include('include.footer')
 @endsection
 <style>
         /* Set the size of the div element that contains the map */

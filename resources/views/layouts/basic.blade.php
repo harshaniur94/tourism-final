@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
+    <title>Waves whales and dolphing watching reservation</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -29,14 +29,20 @@
 
 <body>
     <div class="container-fluid">
+        {{-- included the navigation bar --}}
         @include('include.navbar')
-        <div style="margin-top:200px">
-            @include('include.messages')
-        </div>
+       
+            {{-- included the error messages --}}
+        @include('include.messages')
         
+        {{-- content of the web page --}}
         @yield('content')
         <div style="margin-bottom:0px">
-                @include('include.footer')
+        {{-- footer of the page --}}
+        {{-- <div class="container-fluid"style="position:absolute;bottom:0"> --}}
+              
+        {{-- </div>
+         --}}
         </div>
        
     </div>
