@@ -26,9 +26,12 @@ Route::get('/dashboardboat',function(){
     return view('users.boatowner');
 });
 Route::get('/dashboardadmin', function(){
-   return view('users.adminprofile');
+   return view('boatownerfunctions.index');
 });
-
+Route::post('/boatregistration','BoatsController@store');
+Route::get('/createboat',function(){
+    return view('boatownerfunctions.addnewboat');
+});
 
 
 

@@ -39,7 +39,7 @@
     <div class="wrapper">
         <aside class="main_sidebar">
             <ul style="margin-top:100px">
-                <li><i class="fa fa-arrows"></i><a href="#">Add Boat</a></li>
+                <li><i class="fa fa-arrows"></i><a href="/createboat">Add Boat</a></li>
                 <li><i class="fa fa-battery-2"></i><a href="#">View Transaction History</a></li>
                 <li class=""><i class="fa fa-bell"></i><a href="#">View Reservation History</a></li>
                 <li><i class="fa fa-bicycle"></i><a href="#">Start Ne Reservation</a></li>

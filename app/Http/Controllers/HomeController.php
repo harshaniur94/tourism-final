@@ -27,23 +27,31 @@ class HomeController extends Controller
         
         
         if( $usertype=='boat owner'){
-            $name=auth()->user()->id;
-            $boats = Boats::where('user_id',$name)->first();
-                if($boats==null){
-                    return view('boats.create');
-                }
-                 else{
-                    return view('home')->with('home',$boats);
-                }
-            
-            }else{
-                return 'hello world';
-            }
-        
-        
+            $id=auth()->user()->id;
+        $fname=auth()->user()->fname;
+        $lname=auth()->user()->lname;
+        $email=auth()->user()->email;
+      $boats = Boats::where('ownerid',$id)->get();
+      
+             if($boats==null){
+                 return view('boats.create');
+             }
+              else{
+                 return view('boatownerfunctions.index')->with('boats',$boats);
+             }
+         
+         }
+         elseif($usertype=='admin'){
+             $name=auth()->user()->id;
+             return view('adminfunctions.index');
+             
+         }
      
-        
-    }
+     
+        }
+    //  if( $usertype=='boat owner'){
+       
+  
      /**
      * Show the form for editing the specified resource.
      *

@@ -8,8 +8,7 @@
 
      <div class="row">
          <div class="col-md-2">
-
-         </div>
+        </div>
          <div class="col-md-8 ">
            <!-- Material form register -->
 <div class="card">
@@ -22,14 +21,14 @@
     <div class="card-body px-lg-5 pt-0">
 
         <!-- Form -->
-        <form class="text-center" style="color: #757575;">
-
+        <form class="text-center" style="color: #757575;"  method="POST" action="/boatregistration">
+            @csrf
             <div class="form-row">
                 <div class="col">
                     <!-- Boat Name -->
                     <div class="md-form">
                         <input type="text" id="FirstName" class="form-control" name="fname">
-                        <label for="FirstName">First name</label>
+                        <label for="FirstName">Name of the boat</label>
                     </div>
                 </div>
                 <div class="col">
@@ -43,29 +42,36 @@
             </div>
 
             {{-- boat type --}}
-            <select class="mdb-select md-form form-control">
+            <select class="mdb-select md-form form-control" name="btype">
                 <option value="" disabled selected>Choose your boat type</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
             </select>
+
+             {{-- location --}}
+             <select class="mdb-select md-form form-control" name="location">
+                <option value="" disabled selected>Choose your location</option>
+                <option value="mirissa">mirissa</option>
+                <option value="trincomalee">Trincomalee</option>
+                <option value="colombo">colombo</option>
+            </select>
           
-
             
-            
-
-            <!-- num of seats available-->
+            <!-- number of insured passengers-->
             <div class="md-form">
-                <input type="password" id="Seats" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
-                <label for="seats">Number of seats</label>
+                <input type="text" id="noofseats" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="noofseats">
+                <label for="noofseats">No of seats</label>
                 
-                   
-                </small>
             </div>
+            
+            
+            
+
 
             <!-- Phone number -->
             <div class="md-form">
-                <input type="password" id="Phone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock">
+                <input type="password" id="Phone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="tp">
                 <label for="Phone">Phone number</label>
                 
             </div>
@@ -73,7 +79,7 @@
             <!-- number of insured passengers-->
             <div class="md-form">
                 <input type="text" id="noofinsuredpasengers" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="noofinsuredpassengers">
-                <label for="Phone">No of insured passengers</label>
+                <label for="noofinsuredpasengers">No of insured passengers</label>
                 
             </div>
             
@@ -103,7 +109,7 @@
             </div>
 
             <!-- Sign up button -->
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+           <input type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">
 
             <!-- Social register -->
             <p>or sign up with:</p>
