@@ -64,10 +64,7 @@
                             <td>{{$boats->noofinsuredpassengers}}</td>
                             <td>{{$boats->status}}</td>
                             <td>
-                                    {!!Form::open(['action'=>['BoatsController@edit',$boats->boatid ],'method'=>'post','class'=>'delete'])!!}
-                                 
-                                    {{Form::submit('Edit details',['class'=>'btn btn-primary'])}}
-                               {!!Form::close()!!}
+                            <a href="/boats/{{$boats->boatid}}/edit" class="btn btn-primary">EDIT DETAILS</a>
                             </td>
                             
 

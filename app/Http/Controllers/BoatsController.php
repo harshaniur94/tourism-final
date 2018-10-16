@@ -90,9 +90,9 @@ class BoatsController extends Controller
      {
         
          $name=auth()->user()->id;
-       $boats = Boats::where('user_id',$name)->first();
+       $boats = Boats::where('boatid',$name)->first();
        
-         return view('boats.edit')->with('boats', $boats);
+         return view('boatownerfunctions.edit')->with('boats', $boats);
      }
      /**
       * Update the specified resource in storage.
