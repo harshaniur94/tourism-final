@@ -32,6 +32,8 @@ Route::post('/boatregistration','BoatsController@store');
 Route::get('/createboat',function(){
     return view('boatownerfunctions.addnewboat');
 });
+Route::get('/deleteboat','BoatsController@deleteboatview');
+
 
 
 

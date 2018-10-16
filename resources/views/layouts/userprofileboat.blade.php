@@ -43,14 +43,14 @@
                 <li><i class="fa fa-battery-2"></i><a href="#">View Transaction History</a></li>
                 <li class=""><i class="fa fa-bell"></i><a href="#">View Reservation History</a></li>
                 <li><i class="fa fa-bicycle"></i><a href="#">Start Ne Reservation</a></li>
-                <li><i class="fa fa-circle"></i><a href="#">Delete Boat</a></li>
+                <li><i class="fa fa-circle"></i><a href="deleteboat">Delete Boat</a></li>
                 <li><i class="fa fa-crosshairs"></i><a href="#">Change Password</a></li>
                 <li><i class="fa fa-deaf"></i><a href="#">View Payement Details</a></li>
                 <li><i class="fa fa-desktop"></i><a href="#">Deactivate Account</a></li>
                
             </ul>
         </aside>
-        
+       
     </div>
     
    </div>
@@ -58,12 +58,15 @@
    <div class="col-md-8">
      <div>
         @yield('content')
+        <div style="margin-bottom:-20px" class="col-md-6">
+                @include('include.messages')
+        </div>
      </div>
    </div>
 
        {{--  --}}
             {{-- included the error messages --}}
-        @include('include.messages')
+        
         
         {{-- content of the web page --}}
       

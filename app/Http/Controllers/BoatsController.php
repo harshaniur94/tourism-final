@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\boats;
+
 class BoatsController extends Controller
 {
     /**
@@ -66,7 +67,7 @@ class BoatsController extends Controller
          $boats->status="waiting";
          $boats->ownerid = auth()->user()->id;
          $boats->save();
-         return redirect('dashboardadmin')->with('success','post created');
+         return redirect('/home')->with('success','post created');
      }
      /**
       * Display the specified resource.
@@ -120,6 +121,16 @@ class BoatsController extends Controller
          return redirect('/home')->with('success','post updated');
 
     }
+
+    public function deleteboatview(){
+        $id=auth()->user()->id;
+        $fname=auth()->user()->fname;
+        $lname=auth()->user()->lname;
+        $email=auth()->user()->email;
+        $boats = Boats::where('ownerid',$id)->get();
+        return view('boatownerfunctions.boatdelete')->with('boats',$boats);
+
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -128,7 +139,9 @@ class BoatsController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $boats= boats::find($id);
+       $boats->delete();
+       return redirect('/deleteboat')->with('success','Boat removed');
     }
 }
  
