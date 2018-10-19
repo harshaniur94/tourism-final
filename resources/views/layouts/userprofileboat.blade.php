@@ -104,11 +104,11 @@
     position:fixed;
     top:0;
     left:0;
-    width:350px;
+    width:300px;
     transition: all 300ms cubic-bezier(0.65, 0.05, 0.36, 1);
     will-change: left, width;
     box-shadow: inset -1px 0 10px rgba(0, 0, 0, 0.4);
-    background: #293749;
+    background:#34495E;
 }
 .main_sidebar:after {
     content: '';

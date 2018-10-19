@@ -90,7 +90,7 @@ class BoatsController extends Controller
      {
         
          $name=auth()->user()->id;
-       $boats = Boats::where('boatid',$name)->first();
+       $boats = Boats::find($id);
        
          return view('boatownerfunctions.edit')->with('boats', $boats);
      }
@@ -104,23 +104,44 @@ class BoatsController extends Controller
      public function update(Request $request, $id)
      {
         
-         $boats = boats::find($id);
-         $boats->boatname =$request->input('title');
-         $boats->availableseats =$request->input('availableseats');
-         $boats->priceperhead =$request->input('priceperhead');
-         $boats->registrationnumber =$request->input('registrationnumber');
-         $boats->body =$request->input('body');
-         $boats->receivedseats ='0';
-      
-       
-         $boats->reservationdate ='4';
-         $boats->start_time='9.00AM';
-         $boats->status='0';
-         $boats->user_id = auth()->user()->id;
-         $boats->save();
-         return redirect('/home')->with('success','post updated');
+        $this->validate($request,[
+            'fname'=>'required',
+            'regno'=>'required',
+            'btype'=>'required',
+            'location'=>'required',
+            'noofseats'=>'required',
+            'tp'=>'required',
+            'noofinsuredpassengers'=>'required',
+            'insuarancecompany'=>'required',
+            'insuaranceregno'=>'required',
+            'bankaccno'=>'required',
+            'bankname'=>'required',
+    
+    
+                
+                
+              
+           ]);
+    
+          $boats = new boats;
+             $boats->name=$request->input('fname');
+             $boats->governmentregno =$request->input('regno');
+             $boats->boattype =$request->input('btype');
+             $boats->location=$request->input('location');
+             $boats->phonenumber =$request->input('tp');
+             $boats->noofinsuredpassengers =$request->input('noofinsuredpassengers');
+             $boats->insuarancecpmpanyname=$request->input('insuarancecompany');
+             $boats->insuaranceregno=$request->input('insuaranceregno');
+             $boats->bankacountnumber =$request->input('bankaccno');
+             $boats->Nameofthebank=$request->input('bankname');
+             $boats->noofseats =$request->input('noofseats');
+             $boats->status="waiting";
+             $boats->ownerid = auth()->user()->id;
+             $boats->save();
+             return redirect('/home')->with('success','boat details updated');
+         }  
 
-    }
+    
 
     public function deleteboatview(){
         $id=auth()->user()->id;

@@ -17,161 +17,154 @@
   <link href="../../css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
   
-<div>
-        <h3>PLEASE FILL THE FOLLOWING DETAILS</h3>
-            <div class="container" style="margin-top:100px">
+  {{--  --}}
+  <div>
+    <h3>PLEASE FILL THE FOLLOWING DETAILS</h3>
+        <div class="container" style="margin-top:100px">
 
-            <div class="row">
-               
-                <div class="col-md-10 ">
-                <!-- Material form register -->
-        <div class="card">
-
-            <h5 class="card-header info-color white-text text-center py-4">
-                <strong>Sign up</strong>
-            </h5>
-
-            <!--Card content-->
-            <div class="card-body px-lg-5 pt-0">
-
-                <!-- Form -->
-                <form class="text-center" style="color: #757575;"  method="POST" action="/boatregistration">
-                    @csrf
-                    <div class="form-row">
-                        <div class="col">
-                            <!-- Boat Name -->
-                            <div class="md-form">
-                                <input type="text" id="FirstName" class="form-control" name="fname" placeholder="dsfsdfd">
-                                
-                            </div>
-                        </div>
-                        <div class="col">
-                        
-                            <div class="md-form">
-                                <input type="text" id="Regno" class="form-control" name="regno">
-                                <label for="Regno">Government Registration number</label>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    {{-- boat type --}}
-                    <select class="mdb-select md-form form-control" name="btype">
-                        <option value="" disabled selected>Choose your boat type</option>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                    </select>
-
-                    {{-- location --}}
-                    <select class="mdb-select md-form form-control" name="location">
-                        <option value="" disabled selected>Choose your location</option>
-                        <option value="mirissa">mirissa</option>
-                        <option value="trincomalee">Trincomalee</option>
-                        <option value="colombo">colombo</option>
-                    </select>
-                
-                    
-                    <!-- number of insured passengers-->
-                    <div class="md-form">
-                        <input type="text" id="noofseats" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="noofseats">
-                        <label for="noofseats">No of seats</label>
-                        
-                    </div>
-                    
-                    
-                    
-
-
-                    <!-- Phone number -->
-                    <div class="md-form">
-                        <input type="password" id="Phone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="tp">
-                        <label for="Phone">Phone number</label>
-                        
-                    </div>
-
-                    <!-- number of insured passengers-->
-                    <div class="md-form">
-                        <input type="text" id="noofinsuredpasengers" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="noofinsuredpassengers">
-                        <label for="noofinsuredpasengers">No of insured passengers</label>
-                        
-                    </div>
-                    
-                    <div class="md-form">
-                        <input type="text" id="insuarancecompany" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="insuarancecompany">
-                        <label for="insuarancecompany">Insuarance company name</label>
-                        
-                    </div>
-
-                    <div class="md-form">
-                        <input type="text" id="insuaranceregno" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="insuaranceregno">
-                        <label for="insuaranceregno">Insuarance registration number</label>
-                        
-                    </div>
-                    {{-- bank account details --}}
-
-                    <div class="md-form">
-                        <input type="text" id="bankaccno" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="bankaccno">
-                        <label for="bankaccno">Bank account number</label>
-                        
-                    </div>
-
-                    <div class="md-form">
-                        <input type="text" id="bankname" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="bankname">
-                        <label for="bankname">Name of the bank</label>
-                        
-                    </div>
-
-                    <!-- Sign up button -->
-                <input type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">
-
-                    <!-- Social register -->
-                    <p>or sign up with:</p>
-
-                    <a type="button" class="btn-floating btn-fb btn-sm">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a type="button" class="btn-floating btn-tw btn-sm">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a type="button" class="btn-floating btn-li btn-sm">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                    <a type="button" class="btn-floating btn-git btn-sm">
-                        <i class="fa fa-github"></i>
-                    </a>
-
-                    <hr>
-
-                    <!-- Terms of service -->
-                    <p>By clicking
-                        <em>Sign up</em> you agree to our
-                        <a href="" target="_blank">terms of service</a> and
-                        <a href="" target="_blank">terms of service</a>. </p>
-
-                </form>
-                <!-- Form -->
-
-            </div>
-
-        </div>
-        <!-- Material form register -->
-                </div>
-                    <div class="col-md-2">
-                    </div>
-                    
-            </div>   
-        
-            </div>
-        </div>
-
-
-        <div>
+        <div class="row">
+           
+            <div class="col-md-10 ">
             <!-- Material form register -->
+    <div class="card">
 
-        @endsection()
+        <h5 class="card-header info-color white-text text-center py-4">
+            <strong>Sign up</strong>
+        </h5>
+
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+
+            <!-- Form -->
+            <form class="text-center" style="color: #757575;"  method="POST" action="/boatregistration">
+                @csrf
+                <div class="form-row">
+                    <div class="col">
+                        <!-- Boat Name -->
+                        <div class="md-form">
+                            <p class="left">Name of the boat</p>
+                            <input type="text" id="FirstName" class="form-control" name="fname" placeholder="{{$boats->name}}" value="{{$boats->name}}">
+                            
+                        </div>
+                    </div>
+                    <div class="col">
+                    
+                        <div class="md-form">
+                            <p class="left">Government Registration number</p>
+                            <input type="text" id="Regno" class="form-control" name="regno" placeholder="{{$boats->governmentregno}}"  value="{{$boats->governmentregno}}">
+                           
+                        </div>
+
+                    </div>
+                </div>
+
+                {{-- boat type --}}
+                <select class="mdb-select md-form form-control" name="btype">
+                    <option value="" disabled selected>Choose your boat type</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+
+                {{-- location --}}
+                <select class="mdb-select md-form form-control" name="location">
+                    <option value="" disabled selected>Choose your location</option>
+                    <option value="mirissa">mirissa</option>
+                    <option value="trincomalee">Trincomalee</option>
+                    <option value="colombo">colombo</option>
+                </select>
+            
+                
+                <!-- number of insured passengers-->
+                <div class="md-form">
+                    <p class="left">No of seats</p>
+                    <input type="text" id="noofseats" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="noofseats" placeholder="{{$boats->noofseats}}" value="{{$boats->noofseats}}">
+                    
+                    
+                </div>
+                
+                
+                
+
+
+                <!-- Phone number -->
+                <div class="md-form">
+                    <p class="left">Phone number</p>
+                    <input type="text" id="Phone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="tp" placeholder="{{$boats->phonenumber}}" value="{{$boats->phonenumber}}">
+                    
+                </div>
+
+                <!-- number of insured passengers-->
+                <div class="md-form">
+                    <p class="left">No of insured passengers</p>
+                    <input type="text" id="noofinsuredpasengers" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="noofinsuredpassengers" placeholder="{{$boats->noofinsuredpassengers}}" value="{{$boats->noofinsuredpassengers}}">
+                    
+                    
+                </div>
+                
+                <div class="md-form">
+                    <p  class="left">Insuarance company name</p>
+                    <input type="text" id="insuarancecompany" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="insuarancecompany" placeholder="{{$boats->insuarancecpmpanyname}}" value="{{$boats->insuarancecpmpanyname}}">
+                    
+                    
+                </div>
+
+                <div class="md-form">
+                    <p  class="left">Insuarance registration number</p>
+                    <input type="text" id="insuaranceregno" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="insuaranceregno" placeholder="{{$boats->insuaranceregno}}" value="{{$boats->insuaranceregno}}">
+                </div>
+                {{-- bank account details --}}
+
+                <div class="md-form">
+                    <p  class="left">Bank account number</p>
+                    <input type="text" id="bankaccno" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="bankaccno" placeholder="{{$boats->bankacountnumber}}" value="{{$boats->bankacountnumber}}">
+                </div>
+
+                <div class="md-form">
+                    <p class="left">name of the bank</p>
+                <input type="text" id="bankname" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock" name="bankname" placeholder="{{$boats->Nameofthebank}}" value="{{$boats->Nameofthebank}}">
+                    
+                    
+                </div>
+
+                <!-- Sign up button -->
+            <input type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">
+
+                <!-- Social register -->
+                
+
+                <hr>
+
+                
+
+            </form>
+            <!-- Form -->
+
+        </div>
+
+    </div>
+    <!-- Material form register -->
+            </div>
+                <div class="col-md-2">
+                </div>
+                
+        </div>   
+    
+        </div>
+    </div>
+
+
+    <div>
+ 
+     @endsection()
         <script src="js/formvalidation.js"></script>
         <script>
 
 
         </script>
+
+        <style>
+         .left{
+             text-align: left;
+         }
+        </style>
