@@ -36,7 +36,7 @@
         <div class="card-body px-lg-5 pt-0">
 
             <!-- Form -->
-            <form class="text-center" style="color: #757575;"  method="POST" action="/boatregistration">
+        <form class="text-center" style="color: #757575;"  method="POST" action="/boatedit">
                 @csrf
                 <div class="form-row">
                     <div class="col">
@@ -44,7 +44,7 @@
                         <div class="md-form">
                             <p class="left">Name of the boat</p>
                             <input type="text" id="FirstName" class="form-control" name="fname" placeholder="{{$boats->name}}" value="{{$boats->name}}">
-                            
+                        <input type="hidden" name="id" value="{{$boats->boatid}}">
                         </div>
                     </div>
                     <div class="col">

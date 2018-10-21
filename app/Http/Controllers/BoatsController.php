@@ -101,7 +101,7 @@ class BoatsController extends Controller
       * @param  int  $id
       * @return \Illuminate\Http\Response
       */
-     public function update(Request $request, $id)
+     public function update(Request $request)
      {
         
         $this->validate($request,[
@@ -122,8 +122,8 @@ class BoatsController extends Controller
                 
               
            ]);
-    
-          $boats = new boats;
+            $id=$request->input('id');
+          $boats =boats::find($id);
              $boats->name=$request->input('fname');
              $boats->governmentregno =$request->input('regno');
              $boats->boattype =$request->input('btype');
