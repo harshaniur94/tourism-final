@@ -35,6 +35,7 @@ Route::get('/createboat',function(){
 Route::get('/deleteboat','BoatsController@deleteboatview');
 
 Route::post('/boatedit','BoatsController@update');
+Route::get('/tripscreate','TripController@index');
 
 
 

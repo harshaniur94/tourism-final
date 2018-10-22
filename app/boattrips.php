@@ -11,4 +11,7 @@ class reservation extends Model
     public $primaryKey= 'reservationid';
     //
     public $timestamps='true';
+    protected $fillables=[
+        'start_date','end_date','location','reservedseats','startingtime'
+    ];
 }

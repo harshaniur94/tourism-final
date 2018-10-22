@@ -28,10 +28,10 @@ class HomeController extends Controller
         
         if( $usertype=='boat owner'){
             $id=auth()->user()->id;
-        $fname=auth()->user()->fname;
-        $lname=auth()->user()->lname;
-        $email=auth()->user()->email;
-      $boats = Boats::where('ownerid',$id)->get();
+            $fname=auth()->user()->fname;
+            $lname=auth()->user()->lname;
+            $email=auth()->user()->email;
+            $boats = Boats::where('ownerid',$id)->get();
       
              if($boats==null){
                  return view('boats.create');
