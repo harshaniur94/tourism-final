@@ -77,7 +77,11 @@ class BoatsController extends Controller
       */
      public function show($id)
      {
-         $boats = Boats::find($id);
+        
+         $id=auth()->user()->id;
+        
+        $boats = Boats::where('ownerid',$id)->get();
+        
          return view('userprof.boat')->with('home',$boats);
      }
      /**

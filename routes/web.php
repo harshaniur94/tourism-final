@@ -36,7 +36,5 @@ Route::get('/deleteboat','BoatsController@deleteboatview');
 
 Route::post('/boatedit','BoatsController@update');
 Route::get('/tripscreate','TripController@index');
-
-
-
-
+Route::post('addtrip','TripController@AddNewTrip');
+Route::get('/reservation','ReservationController@index');
